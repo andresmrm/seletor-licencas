@@ -18,3 +18,7 @@ Precisa de Python, Virtualenv e Ruby instalados.
 Precisa de Entr.
     
     ./run.sh
+    
+## Como hospedar
+
+Copiar as pastas `fonts`, `css`, `js` e o arquivo `index.html` para onde quer hospedar.
