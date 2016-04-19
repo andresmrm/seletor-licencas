@@ -1,0 +1,19 @@
+div.fundo-alt
+  div.max-largo
+    h2 Qual material pretende publicar?
+    div.lista-itens
+      -for linha in tipos
+        div.item-lista
+          div.item-titulo onclick="alternar('tipo-detalhes-'+${linha['id']});" : strong =linha['tipo']
+          div#${'tipo-detalhes-'+linha['id']}.item-detalhes.escondido
+            div
+              span exemplos:
+              -for produto in linha['produtos']
+                div.tag-produto =produto
+            div.sugestoes-licencas
+              span sugestões de licenças:
+              ul
+                -for licenca in linha['licencas']
+                  li
+                    a href=${'#'+licenca[0]} =licencas[licenca[0]]['titulo']
+                    ${' ' + licenca[2]}

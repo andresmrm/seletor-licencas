@@ -1,0 +1,8 @@
+div.fundo-licencas
+  div.max-largo
+    h2 Licenças Sugeridas
+    -for codigo, licenca in licencas.items()
+      div#${codigo}.licenca
+        a href=${'#'+codigo} : h3 =licenca['titulo']
+        p =licenca['sumario']
+        a href=${licenca['link']} Ver

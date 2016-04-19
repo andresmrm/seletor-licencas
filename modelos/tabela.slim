@@ -1,0 +1,22 @@
+div.fundo-alt
+  div.max-largo
+    h2 Tabela Resumo
+    table.center
+      thead
+        th Tipo de Material
+        th Produtos
+        th Sugestão de Licença
+      tbody
+        -for linha in tipos
+          tr
+            td : strong =linha['tipo']
+            td
+              ul
+                -for produto in linha['produtos']
+                  li =produto
+            td
+              ul
+                -for licenca in linha['licencas']
+                  li
+                    a href=${'#'+licenca[0]} =licencas[licenca[0]]['titulo']
+                    ${' ' + licenca[2]}
