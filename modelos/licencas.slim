@@ -2,7 +2,10 @@ div.fundo-licencas
   div.max-largo
     h2 Licenças Sugeridas
     -for codigo, licenca in licencas.items()
-      div#${codigo}.licenca
-        a href=${'#'+codigo} : h3 =licenca['titulo']
-        p =licenca['sumario']
-        a href=${licenca['link']} Ver
+      -if codigo[0] != '*'
+        div#${codigo}.licenca
+          a href=${'#'+codigo} : h3 =licenca['titulo']
+          -if licenca['sem_traducao']
+            p.center-text Licença ainda sem tradução para a lingua portuguesa.
+          /p =licenca['sumario']
+          a href=${licenca['link']} Ver licença

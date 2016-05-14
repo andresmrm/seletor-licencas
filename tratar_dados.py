@@ -48,9 +48,19 @@ def carregar_licencas():
         for bloco in texto.split('\n\n'):
             partes = bloco.split('\n')
             codigo = partes[0].strip()
+            link = partes[1].strip()
+            sem_traducao = False
+            if link.endswith(' *'):
+                sem_traducao = True
+                link = link[:-2].strip()
+            explicacao = ''
+            if len(partes) > 3:
+                explicacao = partes[3].strip()
             licencas[codigo] = {
-                'titulo': codigo,
-                'link': partes[1].strip(),
+                'titulo': partes[2].strip(),
+                'link': link,
+                'sem_traducao': sem_traducao,
+                'explicacao': explicacao,
                 'sumario': 'sumario blah blah',
             }
     return licencas
@@ -59,31 +69,6 @@ def carregar_licencas():
 def gravar_index(itens_formatados):
     with open('index.html', 'w') as arq_index:
         arq_index.write(carregar_modelo('base').format(texto=itens_formatados))
-
-
-# def formatar_em_divs(tipos):
-#     modelo_item = carregar_modelo('item')
-#     itens_formatados = ''
-#     for tipo, dados in tipos.items():
-#         prods_formatados = ''.join(
-#             ['<span class="produto">%s</span>' % prod.strip()
-#              for prod in dados[0].split(',')])
-#         itens_formatados += modelo_item.format(
-#             tipo=tipo, produtos=prods_formatados, licencas=dados[1])
-#     return itens_formatados
-
-
-# def formatar_em_tabela(tipos):
-#     modelo_item = carregar_modelo('item-tabela')
-
-#     for tipo, dados in tipos.items():
-#         prods_formatados = ''.join(
-#             ['<span class="produto">%s</span>' % prod.strip()
-#              for prod in dados[0].split(',')])
-#         itens_formatados += modelo_item.format(
-#             tipo=tipo, produtos=prods_formatados, licencas=dados[1])
-
-#     return carregar_modelo('tabela').format(linhas=itens_formatados)
 
 
 if __name__ == '__main__':

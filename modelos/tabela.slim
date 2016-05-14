@@ -17,6 +17,9 @@ div.fundo-alt
             td
               ul
                 -for licenca in linha['licencas']
-                  li
-                    a href=${'#'+licenca[0]} =licencas[licenca[0]]['titulo']
-                    ${' ' + licenca[2]}
+                  -if licenca[0][0] == '*'
+                    =licencas[licenca[0]]['titulo']
+                  -else
+                    li
+                      a href=${'#'+licenca[0]} =licencas[licenca[0]]['titulo']
+                      ${' ' + licenca[2]}

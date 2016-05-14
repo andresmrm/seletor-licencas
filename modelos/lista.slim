@@ -11,9 +11,12 @@ div.fundo-alt
               -for produto in linha['produtos']
                 div.tag-produto =produto
             div.sugestoes-licencas
-              span sugestões de licenças:
-              ul
-                -for licenca in linha['licencas']
-                  li
-                    a href=${'#'+licenca[0]} =licencas[licenca[0]]['titulo']
-                    ${' ' + licenca[2]}
+              -if linha['licencas'][0][0][0] == '*'
+                p =licencas[linha['licencas'][0][0]]['explicacao']
+              -else
+                span sugestões de licenças:
+                ul
+                  -for licenca in linha['licencas']
+                    li
+                      a href=${'#'+licenca[0]} =licencas[licenca[0]]['titulo']
+                      ${' ' + licenca[2]}
