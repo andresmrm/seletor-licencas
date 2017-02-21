@@ -66,10 +66,12 @@ def carregar_licencas():
     return licencas
 
 
-def gravar_index(itens_formatados):
+def gravar_arq(arq, dados, modelos):
+    itens_formatados = ''.join([aplicar_plim(modelo, dados)
+                                for modelo in modelos])
     subs = carregar_modelo('base').format(texto=itens_formatados)
     soup = BeautifulSoup(subs, 'html.parser')
-    with open('index.html', 'w') as arq_index:
+    with open(arq+'.html', 'w') as arq_index:
         arq_index.write(soup.prettify())
 
 
@@ -81,7 +83,7 @@ if __name__ == '__main__':
         'licencas': licencas,
     }
 
-    gravar_index(''.join([
-        aplicar_plim(modelo, dados)
-        for modelo in ['intro', 'lista', 'licencas', 'tabela', 'sobre']
-    ]))
+    gravar_arq('index', dados,
+               ['intro2', 'lista', 'licencas', 'tabela', 'sobre2'])
+    gravar_arq('prefeitura', dados,
+               ['intro', 'lista', 'licencas', 'tabela', 'sobre'])
