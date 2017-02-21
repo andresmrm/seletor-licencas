@@ -3,8 +3,8 @@
 
 from collections import OrderedDict
 
+from bs4 import BeautifulSoup
 from mako.template import Template
-# from mako.lookup import TemplateLookup
 import plim
 
 
@@ -67,8 +67,10 @@ def carregar_licencas():
 
 
 def gravar_index(itens_formatados):
+    subs = carregar_modelo('base').format(texto=itens_formatados)
+    soup = BeautifulSoup(subs, 'html.parser')
     with open('index.html', 'w') as arq_index:
-        arq_index.write(carregar_modelo('base').format(texto=itens_formatados))
+        arq_index.write(soup.prettify())
 
 
 if __name__ == '__main__':
@@ -78,6 +80,7 @@ if __name__ == '__main__':
         'tipos': tipos,
         'licencas': licencas,
     }
+
     gravar_index(''.join([
         aplicar_plim(modelo, dados)
         for modelo in ['intro', 'lista', 'licencas', 'tabela', 'sobre']

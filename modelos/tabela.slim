@@ -3,9 +3,10 @@ div.fundo-alt
     h2 Tabela Resumo
     table.center
       thead
-        th Tipo de Material
-        th Produtos
-        th Sugestão de Licença
+        tr
+          th Tipo de Material
+          th Produtos
+          th Sugestão de Licença
       tbody
         -for linha in tipos
           tr
@@ -18,7 +19,8 @@ div.fundo-alt
               ul
                 -for licenca in linha['licencas']
                   -if licenca[0][0] == '*'
-                    =licencas[licenca[0]]['titulo']
+                    li
+                      =licencas[licenca[0]]['titulo']
                   -else
                     li
                       a href=${'#'+licenca[0]} =licencas[licenca[0]]['titulo']
