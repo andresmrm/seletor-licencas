@@ -2,6 +2,7 @@
 
 Um site para ajudar a selecionar licenças.
 
+https://andresmrm.github.io/seletor-licencas/
 
 ## Como instalar
 
