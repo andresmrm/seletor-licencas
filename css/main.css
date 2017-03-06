@@ -6,11 +6,13 @@
   src: url("../fonts/crimson-roman-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
+
 @font-face {
   font-family: 'Akiza';
   src: url("../fonts/AkizaSans-Regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal; }
+
 .center, .max-largo {
   margin-left: auto;
   margin-right: auto; }
@@ -30,7 +32,7 @@
 /* } */
 body {
   color: #2C2C2C;
-  background-color: #E9FDE5;
+  background-color: #FAFAFA;
   font-family: 'Akiza';
   /* font-family: 'AileronRegular'; */
   font-weight: normal;
@@ -136,7 +138,7 @@ table {
   padding: 10px; }
 
 .fundo-alt {
-  background-color: #E4F1FA; }
+  background-color: #FFF; }
 
 .explicacao {
   text-align: left;
@@ -153,5 +155,3 @@ table {
 
 .ressaltar {
   background-color: #FFD59D; }
-
-/*# sourceMappingURL=main.css.map */
