@@ -84,6 +84,6 @@ if __name__ == '__main__':
     }
 
     gravar_arq('index', dados,
-               ['intro2', 'lista', 'licencas', 'tabela', 'sobre2'])
+               ['intro2', 'lista', 'licencas', 'tabela', 'sobre'])
     gravar_arq('prefeitura', dados,
                ['intro', 'lista', 'licencas', 'tabela', 'sobre'])
