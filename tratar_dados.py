@@ -19,8 +19,8 @@ def aplicar_plim(modelo, dados):
                     preprocessor=plim.preprocessor).render(**dados)
 
 
-def carregar_itens():
-    with open('itens', 'r') as arq_itens:
+def carregar_itens(nome):
+    with open(nome, 'r') as arq_itens:
         texto = arq_itens.read()
         # tipos = OrderedDict()
         linhas = []
@@ -66,7 +66,11 @@ def carregar_licencas():
     return licencas
 
 
-def gravar_arq(arq, dados, modelos):
+def gravar_arq(arq, tipos, licencas, modelos):
+    dados = {
+        'tipos': tipos,
+        'licencas': licencas,
+    }
     itens_formatados = ''.join([aplicar_plim(modelo, dados)
                                 for modelo in modelos])
     subs = carregar_modelo('base').format(texto=itens_formatados)
@@ -77,13 +81,10 @@ def gravar_arq(arq, dados, modelos):
 
 if __name__ == '__main__':
     licencas = carregar_licencas()
-    tipos = carregar_itens()
-    dados = {
-        'tipos': tipos,
-        'licencas': licencas,
-    }
+    tipos = carregar_itens('itens')
+    tipos_pref = carregar_itens('itens_pref')
 
-    gravar_arq('index', dados,
+    gravar_arq('index', tipos, licencas,
                ['intro2', 'lista', 'licencas', 'tabela', 'sobre'])
-    gravar_arq('prefeitura', dados,
+    gravar_arq('prefeitura', tipos_pref, licencas,
                ['intro', 'lista', 'licencas', 'tabela', 'sobre'])
