@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Licenças Livres</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="stylesheet" href="Licen%C3%A7as%20Livres_arquivos/normalize.css">
+    <link rel="stylesheet" href="Licen%C3%A7as%20Livres_arquivos/main.css">
+  </head>
+  <body>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>        <![endif]-->
+    <div class="max-largo curto">
+      <h1>Seletor de Licenças<span style="font-weight: normal;"></span></h1>
+      <h5><span style="font-weight: normal;">Para saber qual licença escolher,
+          verifique que material pretende licençar e escolha entre as opções
+          abaixo.</span><span style="font-weight: normal;"> Uma vez tenha
+          escolhida a licença, copie seu link e inclua no material a ser
+          disponibilizado.</span> </h5>
+    </div>
+    <div class="fundo-alt">
+      <div class="max-largo">
+        <h2>Qual material pretende publicar?</h2>
+        <div class="lista-itens">
+          <div class="item-lista">
+            <div onclick="alternar('tipo-detalhes-'+1);" class="item-titulo"><strong>bases
+                de dados</strong></div>
+            <div id="tipo-detalhes-1" class="item-detalhes escondido">
+              <div><span>exemplos:</span>
+                <div class="tag-produto">planilhas</div>
+                <div class="tag-produto">tabelas</div>
+                <div class="tag-produto">dados estruturados</div>
+              </div>
+              <div class="sugestoes-licencas"> <span>sugestões de licenças:</span>
+                <ul>
+                  <li><a href="#CC0">Creative Commons Zero</a> </li>
+                  <li><a href="#CC-BY">Creative Commons Atribuição</a> </li>
+                  <li><a href="#ODC-BY">Open Data Commons Attribution License</a>
+                  </li>
+                  <li><a href="#PDDL">ODC Public Domain Dedication License</a> </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="item-lista">
+            <div onclick="alternar('tipo-detalhes-'+3);" class="item-titulo"><strong>legislação,
+                tabelas e fórmulas</strong></div>
+            <div id="tipo-detalhes-3" class="item-detalhes escondido">
+              <div><span>exemplos:</span>
+                <div class="tag-produto">textos</div>
+                <div class="tag-produto">tabelas</div>
+              </div>
+              <div class="sugestoes-licencas">
+                <p>Uso livre. Não protegido por direito autoral, segundo o
+                  artigo 8 da Lei de Direitos Autorais (<a href="http://www.planalto.gov.br/ccivil_03/leis/L9610.htm">Lei
+                    6910/1998</a>).</p>
+              </div>
+            </div>
+          </div>
+          <div class="item-lista">
+            <div onclick="alternar('tipo-detalhes-'+4);" class="item-titulo"><strong>obras
+                literárias / artísticas, manuais</strong></div>
+            <div id="tipo-detalhes-4" class="item-detalhes escondido">
+              <div><span>exemplos:</span>
+                <div class="tag-produto">textos</div>
+                <div class="tag-produto">fórmulas</div>
+                <div class="tag-produto">obras de arte em geral</div>
+              </div>
+              <div class="sugestoes-licencas"> <span>sugestões de licenças:</span>
+                <ul>
+                  <li><a href="#CC-BY">Creative Commons Atribuição</a> </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="item-lista">
+            <div onclick="alternar('tipo-detalhes-'+5);" class="item-titulo"><strong>divulgação
+                / imprensa</strong></div>
+            <div id="tipo-detalhes-5" class="item-detalhes escondido">
+              <div><span>exemplos:</span>
+                <div class="tag-produto">gravações de áudio</div>
+                <div class="tag-produto">gravações de vídeo</div>
+                <div class="tag-produto">slides</div>
+              </div>
+              <div class="sugestoes-licencas"> <span>sugestões de licenças:</span>
+                <ul>
+                  <li><a href="#CC0">Creative Commons Zero</a> </li>
+                  <li><a href="#CC-BY">Creative Commons Atribuição</a> </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="item-lista">
+            <div onclick="alternar('tipo-detalhes-'+6);" class="item-titulo"><strong>obras
+                científicas</strong></div>
+            <div id="tipo-detalhes-6" class="item-detalhes escondido">
+              <div><span>exemplos:</span>
+                <div class="tag-produto">textos</div>
+                <div class="tag-produto">imagens</div>
+                <div class="tag-produto">fórmulas</div>
+                <div class="tag-produto">tabelas</div>
+              </div>
+              <div class="sugestoes-licencas"> <span>sugestões de licenças:</span>
+                <ul>
+                  <li><a href="#CC-BY">Creative Commons Atribuição</a> </li>
+                  <li><a href="#CC-BY-NC">Creative Commons Atribuição - Não
+                      Comercial</a> </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="item-lista">
+            <div onclick="alternar('tipo-detalhes-'+9);" class="item-titulo"><strong>lógico</strong></div>
+            <div id="tipo-detalhes-9" class="item-detalhes escondido">
+              <div><span>exemplos:</span>
+                <div class="tag-produto">softwares</div>
+                <div class="tag-produto">documentações</div>
+              </div>
+              <div class="sugestoes-licencas"> <span>sugestões de licenças:</span>
+                <ul>
+                  <li><a href="#AGPL">GNU Affero General Public License</a> </li>
+                  <li><a href="#GPL">GNU General Public License</a> </li>
+                  <li><a href="#BSD">BSD License</a> </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="item-lista">
+            <div onclick="alternar('tipo-detalhes-'+10);" class="item-titulo"><strong>geoespacial</strong></div>
+            <div id="tipo-detalhes-10" class="item-detalhes escondido">
+              <div><span>exemplos:</span>
+                <div class="tag-produto">mapas</div>
+              </div>
+              <div class="sugestoes-licencas"> <span>sugestões de licenças:</span>
+                <ul>
+                  <li><a href="#ODbL">ODC Open Database License</a> (eletrônico)</li>
+                  <li><a href="#CC0">Creative Commons Zero</a> (físico ou
+                    eletrônico)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="item-lista">
+            <div onclick="alternar('tipo-detalhes-'+11);" class="item-titulo"><strong>recursos
+                didáticos e correlatos</strong></div>
+            <div id="tipo-detalhes-11" class="item-detalhes escondido">
+              <div><span>exemplos:</span>
+                <div class="tag-produto">livros didáticos</div>
+                <div class="tag-produto">apostilas</div>
+              </div>
+              <div class="sugestoes-licencas"> <span>sugestões de licenças:</span>
+                <ul>
+                  <li><a href="#CC-BY">Creative Commons Atribuição</a> </li>
+                  <li><a href="#CC-BY-NC">Creative Commons Atribuição - Não
+                      Comercial</a> </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fundo-licencas">
+      <div class="max-largo">
+        <h2>Licenças Sugeridas</h2>
+        <div id="CC0" class="licenca"><a href="#CC0">
+            <h3>Creative Commons Zero</h3>
+          </a> <a href="https://creativecommons.org/choose/zero/?lang=pt_BR">Ver
+            licença</a></div>
+        <div id="CC-BY" class="licenca"><a href="#CC-BY">
+            <h3>Creative Commons Atribuição</h3>
+          </a> <a href="https://creativecommons.org/licenses/by/3.0/br/">Ver
+            licença</a></div>
+        <div id="CC-BY-NC" class="licenca"><a href="#CC-BY-NC">
+            <h3>Creative Commons Atribuição - Não Comercial</h3>
+          </a> <a href="https://creativecommons.org/licenses/by-nc/3.0/br/">Ver
+            licença</a></div>
+        <div id="CC-BY-SA" class="licenca"><a href="#CC-BY-SA">
+            <h3>Creative Commons Atribuição - Compartilha Igual</h3>
+          </a> <a href="https://creativecommons.org/licenses/by-sa/3.0/br/">Ver
+            licença</a></div>
+        <div id="CERN-OHL" class="licenca"><a href="#CERN-OHL">
+            <h3>Licença de Hardware Aberto do CERN</h3>
+          </a> <a href="http://cta.if.ufrgs.br/projects/suporte-cta/wiki/Licen%C3%A7a_de_Hardware_Aberto_do_CERN">Ver
+            licença</a></div>
+        <div id="ODC-BY" class="licenca"><a href="#ODC-BY">
+            <h3>Open Data Commons Attribution License</h3>
+          </a>
+          <p class="center-text">Licença ainda sem tradução para a lingua
+            portuguesa.</p>
+          <a href="http://opendatacommons.org/licenses/by/">Ver licença</a></div>
+        <div id="PDDL" class="licenca"><a href="#PDDL">
+            <h3>ODC Public Domain Dedication License</h3>
+          </a>
+          <p class="center-text">Licença ainda sem tradução para a lingua
+            portuguesa.</p>
+          <a href="http://opendatacommons.org/licenses/pddl/summary/">Ver
+            licença</a></div>
+        <div id="TAPR-OHL" class="licenca"><a href="#TAPR-OHL">
+            <h3>TAPR Open Hardware License</h3>
+          </a>
+          <p class="center-text">Licença ainda sem tradução para a lingua
+            portuguesa.</p>
+          <a href="https://www.tapr.org/TAPR_Open_Hardware_License_v1.0.txt">Ver
+            licença</a></div>
+        <div id="ODbL" class="licenca"><a href="#ODbL">
+            <h3>ODC Open Database License</h3>
+          </a>
+          <p class="center-text">Licença ainda sem tradução para a lingua
+            portuguesa.</p>
+          <a href="http://opendatacommons.org/licenses/odbl/summary/">Ver
+            licença</a></div>
+        <div id="GPL" class="licenca"><a href="#GPL">
+            <h3>GNU General Public License</h3>
+          </a>
+          <p class="center-text">Licença ainda sem tradução para a lingua
+            portuguesa.</p>
+          <a href="http://www.gnu.org/licenses/gpl-3.0.html">Ver licença</a></div>
+        <div id="AGPL" class="licenca"><a href="#AGPL">
+            <h3>GNU Affero General Public License</h3>
+          </a>
+          <p class="center-text">Licença ainda sem tradução para a lingua
+            portuguesa.</p>
+          <a href="http://www.gnu.org/licenses/agpl.html">Ver licença</a></div>
+        <div id="BSD" class="licenca"><a href="#BSD">
+            <h3>BSD License</h3>
+          </a>
+          <p class="center-text">Licença ainda sem tradução para a lingua
+            portuguesa.</p>
+          <a href="https://opensource.org/licenses/BSD-3-Clause">Ver licença</a></div>
+      </div>
+    </div>
+    <div class="fundo-alt">
+      <div class="max-largo">
+        <h2>Tabela Resumo</h2>
+        <table style="width: 793px; height: 1038px;" class="center">
+          <thead>
+            <tr>
+              <th>Tipo de Material</th>
+              <th>Produtos</th>
+              <th>Licenças sugeridas</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>bases de dados</strong></td>
+              <td>
+                <ul>
+                  <li>planilhas</li>
+                  <li>tabelas</li>
+                  <li>dados estruturados</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li><a href="#CC0">Creative Commons Zero</a> </li>
+                  <li><a href="#CC-BY">Creative Commons Atribuição</a> </li>
+                  <li><a href="#ODC-BY">Open Data Commons Attribution License</a>
+                  </li>
+                  <li><a href="#PDDL">ODC Public Domain Dedication License</a> </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>obras literárias, artísticas, manuais e assemelhados<br>
+                </strong></td>
+              <td>
+                <ul>
+                  <li>textos</li>
+                  <li>obras de arte em geral</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li><a href="#CC-BY">Creative Commons Atribuição</a> </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Divulgação, imprensa, registros de eventos públicos<br>
+                </strong></td>
+              <td>
+                <ul>
+                  <li>textos, </li>
+                  <li>gravações de áudio, fotos, vídeos e slides</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li><a href="#CC0">Creative Commons Zero</a> </li>
+                  <li><a href="#CC-BY">Creative Commons Atribuição</a> </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>obras científicas</strong></td>
+              <td>
+                <ul>
+                  <li>textos</li>
+                  <li>imagens</li>
+                  <li>tabelas</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li><a href="#CC-BY">Creative Commons Atribuição</a> </li>
+                  <li><a href="#CC-BY-NC">Creative Commons Atribuição - Não
+                      Comercial</a> </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>lógico</strong></td>
+              <td>
+                <ul>
+                  <li>softwares</li>
+                  <li>documentações</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li><a href="#AGPL">Affero General Public License (AGPL)</a> </li>
+                  <li><a href="#GPL">General Public License (GPL)</a> </li>
+                  <li><a href="#BSD">BSD License</a> </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>geoespacial</strong></td>
+              <td>
+                <ul>
+                  <li>mapas</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li><a href="#ODbL">Open Database License (ODbL)</a>
+                    (eletrônico)</li>
+                  <li><a href="#CC0">Creative Commons Zero</a> (físico ou
+                    eletrônico)</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>recursos didáticos e correlatos</strong></td>
+              <td>
+                <ul>
+                  <li>livros didáticos</li>
+                  <li>apostilas</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li><a href="#CC-BY">Creative Commons Atribuição</a> <br>
+                  </li>
+                  <li><a href="#CC-BY-NC">Creative Commons Atribuição - Não
+                      Comercial</a> </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>legislação, tabela, normas e fórmulas<br>
+                </strong></td>
+              <td>
+                <ul>
+                  <li>textos</li>
+                  <li>tabelas</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  Uso livre. Não protegido por direito autoral, segundo o artigo
+                  8 da <a target="_blank" style="text-decoration: underline;" href="http://www.planalto.gov.br/ccivil_03/leis/L9610.htm">Lei
+                    de Direitos Autorais <span style="color: #7b65bb;"><span style=""></span></span>
+                  </a> (Lei 6910/1998)
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="fundo-sobre">
+      <div class="max-largo">
+        <h2>Sobre</h2>
+        <p>Autores Andres Martano e Jorge Machado </p>
+        <a href="https://github.com/andresmrm/seletor-licencas">Repositório</a></div>
+    </div>
+    <script src="Licen%C3%A7as%20Livres_arquivos/main.js"></script>
+  </body>
+</html>
